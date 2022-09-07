@@ -21,13 +21,16 @@ class Solution {
     }
     
     List<String> createPathString(TreeNode node, List<String> paths, String path)  { 
-        if(node != null) {
-         
+       if(node != null) {
         if(node.left == null && node.right == null) {
+            //adding the last node in a path without an arrow
             path = path + node.val;
+            //adding a completed path to the list
             paths.add(path);
+            //clearing path variable once a path is completed
             path = "";
         } else {
+            //we haven't yet reached the end of a path. add the value and arrow
             path = path + node.val + "->";
         }
         createPathString(node.left, paths, path);
