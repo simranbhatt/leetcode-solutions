@@ -9,9 +9,6 @@ class Solution {
             secondMap.merge(letter, 1, Integer::sum);
         }
         
-        if(firstMap.equals(secondMap))
-            return true;
-        
-        return false;
+        return firstMap.equals(secondMap);
     }
 }
