@@ -8,7 +8,7 @@ class Solution {
         //checking if all ransomNote letters are present in the magazine hashmap
         for(char letter : ransomNote.toCharArray()) {
             if(magazineMap.containsKey(letter) && magazineMap.get(letter) > 0)
-                magazineMap.put(letter, magazineMap.get(letter) - 1);
+                magazineMap.merge(letter, -1, Integer::sum);
             else
                 return false; 
         }
