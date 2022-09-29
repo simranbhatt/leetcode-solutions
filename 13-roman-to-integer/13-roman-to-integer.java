@@ -15,17 +15,16 @@ class Solution {
         for(int i = 0; i < romanNumber.length(); i++) {
             int currentValue = romanNumeralDictionary.get(romanNumber.charAt(i));
             if(i+1 < romanNumber.length()) {
-              int nextValue = romanNumeralDictionary.get(romanNumber.charAt(i+1));
-              if(currentValue < nextValue) {
+                int nextValue = romanNumeralDictionary.get(romanNumber.charAt(i+1));
+                if(currentValue < nextValue) {
                     integerValue += nextValue - currentValue;
                     i++;
-              } else {
-                  integerValue += currentValue;
-              }
-            }  else {
-                integerValue += currentValue;
+                    continue;
+                } 
             }
+            integerValue += currentValue;
         }
+        
         return integerValue;
     }
       
