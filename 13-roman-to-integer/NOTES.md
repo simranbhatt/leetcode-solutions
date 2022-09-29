@@ -1,1 +1,1 @@
-​
+If the value after the current value is greater than the current value, then we simply subtract the current value from the next value to get the actual value of the Roman character pair.
