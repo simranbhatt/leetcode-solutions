@@ -3,9 +3,7 @@ class Solution {
         
         HashMap<Character, Integer> characterOccurrences = new HashMap<>();
         int lengthOfLongestPalindrome = allLetters.length();
-        int oddOccurrences = 0;
-        boolean unpairedLetterExists = false;
-        
+        int oddOccurrences = 0;       
         
         for(char letter : allLetters.toCharArray()) {
             characterOccurrences.merge(letter, 1, Integer::sum);
